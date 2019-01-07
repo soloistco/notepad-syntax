@@ -1,7 +1,7 @@
 {
   "name": "notepad-syntax",
   "theme": "syntax",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A notepad inspired syntax for Atom. Best use with notepad ui.",
   "keywords": [
     "atom",
