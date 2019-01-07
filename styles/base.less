@@ -1,0 +1,210 @@
+@import "syntax-variables";
+@import "mixins";
+
+atom-text-editor {
+  color: @syntax-text-color;
+  background-color: @syntax-background-color;
+
+  // code wrap guide
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+    opacity: @syntax-guide-opacity;
+  }
+
+  // code indent guide
+  .indent-guide {
+    border-left: 1px solid @syntax-indent-guide-color;
+    box-shadow: none;
+    position: relative;
+    opacity: @syntax-guide-opacity;
+  }
+
+  // line bar on left
+  .gutter {
+    color: @syntax-gutter-text-color;
+    background-color: @syntax-gutter-background-color;
+
+    &[gutter-name*="linter"] {
+      margin-left: -14px;
+      opacity: 0.1;
+    }
+
+    .line-number {
+      padding-right: 14px;
+
+      &.folded, .gutter &::after {
+        color: @syntax-icon-color;
+      }
+
+      &.cursor-line {
+        #line.highlight();
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  // code folding icon
+  .fold-marker {
+    &::after {
+      color: @syntax-icon-color;
+    }
+  }
+
+  // code editor visible area
+  .scroll-view {
+    .line {
+      position: relative;
+
+      #line.border-bottom();
+
+      .line {
+        &::after {
+          display: none;
+        }
+      }
+
+      &.cursor-line {
+        background-color: @syntax-cursor-line-color;
+      }
+    }
+  }
+
+  .invisible {
+    color: @syntax-source-text-color;
+  }
+
+  // cursor
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  // selected text
+  .selection {
+    .region {
+      background-color: @syntax-selection-color;
+    }
+  }
+
+  .search-results {
+    .syntax--marker {
+      &.current-result {
+        .region {
+          border: 1px solid @white;
+        }
+      }
+
+      .region {
+        background-color: transparent;
+        border: 1px solid @gray;
+      }
+    }
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-text-color;
+  }
+
+  // syntax - generic
+  .syntax--source {
+    color: @syntax-source-text-color;
+  }
+
+  .syntax--heading {
+    color: @syntax-heading-text-color;
+  }
+  .syntax--tag {
+    color: @syntax-tag-text-color;
+  }
+  .syntax--variable {
+    color: @syntax-variable-text-color;
+  }
+
+  .syntax--code {
+    color: @syntax-code-text-color;
+  }
+  .syntax--constant {
+    color: @syntax-constant-text-color;
+  }
+
+  .syntax--numeric {
+    color: @syntax-numeric-text-color;
+  }
+  .syntax--string {
+    color: @syntax-string-text-color;
+  }
+
+  .syntax--class {
+    color: @syntax-class-text-color;
+
+    &.syntax--meta {
+      color: @syntax-meta-text-color;
+    }
+  }
+  .syntax--function {
+    color: @syntax-function-text-color;
+  }
+  .syntax--link {
+    color: @syntax-link-text-color;
+  }
+  .syntax--property-name {
+    color: @syntax-property-text-color;
+  }
+
+  .syntax--storage {
+    color: @syntax-storage-text-color;
+
+    &.syntax--function {
+      color: @syntax-function-text-color;
+    }
+  }
+  .syntax--attribute-name {
+    color: @syntax-attribute-text-color;
+  }
+  .syntax--brace {
+    color: @syntax-brace-text-color;
+  }
+  .syntax--delimiter {
+    color: @syntax-delimiter-text-color;
+  }
+  .syntax--keyword {
+    color: @syntax-keyword-text-color;
+  }
+  .syntax--operator {
+    color: @syntax-operator-text-color;
+  }
+  .syntax--punctuation {
+    color: @syntax-punctuation-text-color;
+  }
+  .syntax--square {
+    color: @syntax-square-text-color;
+  }
+  .syntax--separator {
+    color: @syntax-separator-text-color;
+  }
+
+  // syntax - html & css
+  .syntax--html {
+    color: @syntax-html-text-color;
+
+    .syntax--string {
+      color: @syntax-string-text-color;
+    }
+  }
+
+  .syntax--css {
+    &.syntax--attribute-name {
+      color: @syntax-css-attribute-name-text-color;
+    }
+
+    &.syntax--pseudo-class {
+      color: @syntax-pseudo-class-text-color;
+    }
+  }
+
+  .syntax--comment {
+    color: @syntax-comment-text-color;
+  }
+}

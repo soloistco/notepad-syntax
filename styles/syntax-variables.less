@@ -1,0 +1,119 @@
+// This defines all syntax variables that syntax themes must implement when they
+// include a syntax-variables.less file.
+
+// Colors
+@white: #FFFFFF;
+@grayWhite: #F3F3F2;
+@grayLight: #DCDDDD;
+@gray: #9FA0A0;
+@grayMid: #383C3C;
+@grayDark: #2B2B2B;
+
+@black: #1E1F20;
+
+@navyLight: #455A64;
+@navy: #37474F;
+@navyDark: #263238;
+
+@red: #DC3B34;
+@redDark: #D90000;
+
+@pink: #FD8488;
+@pinkDark: #FC7475;
+
+@orange: #FE9300;
+@orangeDark: #FD7A00;
+
+@yellow: #FCF856;
+@yellowDark: #FFDF3C;
+
+@green: #278E5F;
+@greenDark: #008344;
+
+@aqua: #95DADF;
+@aquaDark: #6ED0D4;
+
+@blue: #0093DC;
+@blueDark: #0079BE;
+
+@indigo: #005E85;
+@indigoDark: #1B3745;
+
+@purple: #9771AE;
+@purpleDark: #7D469A;
+
+// General colors
+@syntax-text-color: @grayDark;
+@syntax-text-color-subtle: @grayWhite;
+@syntax-text-color-highlight: @grayLight;
+@syntax-cursor-color: @grayMid;
+@syntax-cursor-line-color: lighten(@yellow, 25%);
+@syntax-selection-color: lighten(@aquaDark, 25%);
+@syntax-background-color: @white;
+
+// Guide colors
+@syntax-wrap-guide-color: @redDark;
+@syntax-indent-guide-color: @redDark;
+@syntax-invisible-character-color: @grayLight;
+@syntax-guide-opacity: 0.1;
+
+// Icon colors
+@syntax-icon-color: @gray;
+@syntax-fold-marker-color: @gray;
+
+// For find and replace markers
+@syntax-result-marker-color: @gray;
+@syntax-result-marker-color-selected: white;
+
+// Gutter colors (line bar on left)
+@syntax-gutter-text-color: @grayMid;
+@syntax-gutter-text-color-selected: @grayDark;
+@syntax-gutter-background-color: darken(@white, 1%);
+@syntax-gutter-background-color-selected: @blueDark;
+
+// Syntax - generic
+@syntax-source-text-color: @grayMid; // base color
+
+@syntax-doctype-text-color: @redDark;
+@syntax-entity-name-text-color: @redDark; // misc
+@syntax-heading-text-color: @redDark; // h
+@syntax-meta-text-color: @redDark; // misc
+@syntax-tag-text-color: @redDark; // div, p, img...
+@syntax-variable-text-color: @redDark; // variables
+
+@syntax-numeric-text-color: @orangeDark; // 0, 1, 2...
+@syntax-string-text-color: @orangeDark; // "string"
+
+@syntax-class-text-color: @blueDark; // class
+@syntax-function-text-color: @blueDark; // func
+@syntax-link-text-color: @blueDark; // links
+@syntax-property-text-color: @blueDark; // width, height, color...
+
+@syntax-attribute-text-color: @purpleDark; // html attribute
+@syntax-brace-text-color: @purpleDark; // ()
+@syntax-delimiter-text-color: @purpleDark; // ,
+@syntax-keyword-text-color: @purpleDark; // @, return...
+@syntax-operator-text-color: @purpleDark; // = <>
+@syntax-pseudo-class-text-color: @purpleDark; // hover
+@syntax-punctuation-text-color: @purpleDark; // {}
+@syntax-separator-text-color: @purpleDark; // =
+@syntax-square-text-color: @purpleDark; // []
+@syntax-storage-text-color: @purpleDark; // var, class, import, extend...
+
+@syntax-code-text-color: @greenDark; // source code
+@syntax-constant-text-color: @greenDark; // true, false...
+
+@syntax-comment-text-color: @gray;
+@syntax-invisible-text-color: @grayLight;
+
+// specific
+// html
+@syntax-html-text-color: @blueDark; // html base color
+// css
+@syntax-css-attribute-name-text-color: @redDark; // css all attributes - [name], .class
+
+// For git diff info. i.e. in the gutter
+@syntax-color-renamed: @blueDark;
+@syntax-color-added: @greenDark;
+@syntax-color-modified: @orangeDark;
+@syntax-color-removed: @redDark;
