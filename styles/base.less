@@ -24,13 +24,18 @@ atom-text-editor {
     color: @syntax-gutter-text-color;
     background-color: @syntax-gutter-background-color;
 
-    &[gutter-name*="linter"] {
-      margin-left: -14px;
-      opacity: 0.1;
+    &[gutter-name*="debugger-breakpoint"] {
+      background-color: @syntax-gutter-breakpoint-background-color;
+    }
+    &[gutter-name*="diagnostics-gutter"] {
+      background-color: @syntax-gutter-diagnostics-background-color;
     }
 
     .line-number {
-      padding-right: 14px;
+      &::before {
+        top: 50%;
+        bottom: auto;
+      }
 
       &.folded, .gutter &::after {
         color: @syntax-icon-color;
